@@ -1,0 +1,390 @@
+body {
+  background-color: hsl(189, 41%, 84%);
+  text-align: center;
+  font-family: 'Space Mono', monospace;
+}
+
+h1 {
+  font-size: 40px;
+  color: hsl(172, 67%, 45%);
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 16px;
+  color: hsl(183, 100%, 15%);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+p {
+  color: hsl(184, 14%, 56%);
+  font-size: 14px;
+  margin-top: 0;
+}
+
+main {
+  margin: 10rem auto;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.calculator-container{
+  background-color: white;
+  border-radius: 15px;
+  height: 30rem;
+  margin: 4rem 18rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.tip-calculation-container {
+  grid-column: span 6;
+  height: 30rem;
+  border-radius: 15px;
+}
+
+.bill-container {
+  height: 7rem;
+  padding: 1rem;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.bill-container h3 {
+  margin-left: 1rem;
+}
+
+.input-container {
+  width: 98%;
+  height: 2.6rem;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(189, 41%, 97%);
+  position: relative;
+  margin-left: 1rem;
+  margin-top: 0.1rem;
+}
+
+.icon {
+  position: absolute;
+  display: inline;
+  float: left;
+  margin-top: 1.25rem;
+  margin-left: 2.5rem;
+}
+
+input {
+  width: 95%;
+  height: 2.5rem;
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  border-radius: 5px;
+  text-align: right;
+  font-size: 24px;
+  font-family: 'Space Mono', monospace;
+  padding-right: 1rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+input:hover{
+  cursor: pointer;
+  border: 2px solid;
+  border-color: hsl(172, 67%, 45%);
+}
+
+
+.tip-container {
+  height: 10rem;
+  padding: 1rem;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.tip-container h3 {
+  margin-left: 1rem;
+  margin-top: 0.1rem;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-left: 1rem;
+  width: 100%;
+  height: 7rem;
+}
+
+.button-container button {
+  grid-column: span 4;
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  font-size: 24px;
+  border: none;
+  font-family: 'Space Mono', monospace;
+  border-radius: 5px;
+  margin: 0.3rem 0.6rem 0.3rem 0;
+}
+
+.button-container button:hover{
+  cursor: pointer;
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+}
+
+#custom-button{
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  grid-column: span 4;
+  font-size: 20px;
+  text-align: center;
+  height: 87%;
+  width: 93.5%;
+  padding: 0;
+  border: none;
+  font-family: 'Space Mono', monospace;
+  border-radius: 5px;
+  margin: 0.3rem 1rem -0.6rem 0;
+}
+
+#custom-button:hover{
+  cursor: pointer;
+  border: 2px solid;
+  border-color: hsl(172, 67%, 45%);
+}
+
+.people-container {
+  height: 7rem;
+  padding: 1rem;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.people-container h3 {
+  margin-left: 1rem;
+}
+
+.tip-display-container {
+  grid-column: span 6;
+  height: 30rem;
+  border-radius: 15px;
+}
+
+.result-background {
+  border-radius: 5px;
+  margin: 2rem;
+  height: 87%;
+  background-color: hsl(183, 100%, 15%);
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.tip-amount-per-person-container {
+  grid-row: span 4;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 2rem 1rem 0 0;
+  text-align: left;
+}
+
+.tip-amount-per-person-text {
+  grid-column: span 6;
+}
+
+.tip-amount-per-person-text p {
+  margin-left: 2rem;
+}
+
+.tip-amount-per-person-result {
+  text-align: right;
+  grid-column: span 6;
+}
+
+.tip-amount-per-person-result h1{
+  padding-top: 0rem;
+  margin-right: 3rem;
+}
+
+.result-text {
+  color: white;
+  margin-left: 2rem;
+}
+
+.total-per-person-container {
+  grid-row: span 4;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 2rem 1rem 0 0;
+  text-align: left;
+}
+
+.total-per-person-text {
+  grid-column: span 6;
+}
+
+.total-per-person-text p {
+  margin-left: 2rem;
+}
+
+.total-per-person-result {
+  grid-column: span 6;
+  text-align: right;
+}
+
+.total-per-person-result h1 {
+  padding-top: 0rem;
+  margin-right: 3rem;
+}
+
+.reset-container {
+  grid-row: span 4;
+}
+
+#reset-button {
+  width: 85%;
+  height: 2.5rem;
+  margin-top: 5rem;
+  vertical-align: middle;
+  border-radius: 5px;
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+  background-color: hsl(172, 67%, 45%);
+  opacity: 50%;
+  border: none;
+  color: hsl(183, 100%, 15%);
+  text-transform: uppercase;
+}
+
+#reset-button:hover{
+  background-color: hsl(185, 41%, 84%);
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.bill-inner-container{
+  display: block;
+  position: relative;
+}
+
+/* Error classes added by Javascript */
+
+.error {
+  border: 2px solid;
+  border-color: #ee7600;
+}
+
+.errorText {
+  display: inline-block;
+  float: right;
+  color: #ee7600;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* Tablet display  */
+
+@media only screen and (max-width: 1200px) {
+
+  .calculator-container {
+    margin: 4rem 8rem;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+/* //Mobile display// */
+
+@media only screen and (max-width: 995px) {
+
+  main {
+    margin: 5rem auto;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .calculator-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: 52rem;
+    margin: 2rem 0;
+  }
+
+  .tip-calculation-container {
+    grid-column: span 12;
+  }
+
+ #bill-amount {
+   width: 90%;
+ }
+
+ #number-of-people {
+   width: 90%;
+ }
+
+ .tip-container {
+   height: 12rem;
+ }
+
+  .button-container {
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: 10rem;
+    padding-bottom: 2rem;
+  }
+
+  .button-container button {
+    grid-column: span 6;
+  }
+
+  #custom-button {
+    grid-column: span 6;
+  }
+
+  .tip-display-container {
+    grid-column: span 12;
+    height: 20rem;
+    margin-top: 0rem;
+  }
+
+  .result-background {
+    margin: 0 2rem;
+    height: 95%;
+    border-radius: 15px;
+  }
+
+  .tip-amount-per-person-container {
+    margin: 1rem 1rem 0 0;
+    justify-content: center;
+  }
+
+  .tip-amount-per-person-text {
+    margin-top: 1rem;
+  }
+
+  .total-per-person-container {
+    margin: 0.5rem 1rem 0 0;
+  }
+
+  .total-per-person-text {
+    margin-top: 1rem;
+  }
+
+  #reset-button {
+    margin-top: 1rem;
+  }

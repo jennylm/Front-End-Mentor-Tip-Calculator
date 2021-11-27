@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -15,30 +20,78 @@
   </style>
 </head>
 <body>
+  <main>
+    <div class="image-container">
+      <img src="images/logo.svg" alt="splitter-logo">
+    </div>
+    <div class="calculator-container">
+      <div class="tip-calculation-container">
+        <div class="bill-container">
+          <div id="bill-inner-container">
+            <h2>Bill</h2>
+          </div>
+          <form id ="tip-form">
+            <!-- <div class="input-container"> -->
+              <img src="images/icon-dollar.svg" class="icon" alt="dollar-sign"></img>
+              <input name="bill-amount"id="bill-amount" type="number" placeholder="0" value="0" required></input>
+            <!-- </div> -->
+          <!-- </form> -->
+        </div>
+        <div class="tip-container">
+          <h2>Select Tip %</h2>
+          <div class="button-container">
+            <button name="submit" type="button" value="5" id="five-percent">5%</button>
+            <button name="submit" type="button" value="10" id="ten-percent">10%</button>
+            <button name="submit" type="button" value="15" id="fifteen-percent">15%</button>
+            <button name="submit" type="button" value="25" id="twenty-five-percent">25%</button>
+            <button name="submit" type="button" value="50" id="fifty-percent">50%</button>
+            <input name="submit" type="number" value="" placeholder="Custom" id="custom-button"></input>
+          </div>
+        </div>
+        <div class="people-container">
+          <div id = "people-inner-container">
+          <h2>Number of People</h2>
+          </div>
+          <!-- <form> -->
+            <!-- <div class="input-container"> -->
+              <img src="images/icon-person.svg" class="icon" alt="person-sign"></img>
+              <input name="num-people" id="number-of-people" type="number" placeholder="0" value="0" required></input>
+            <!-- </div> -->
+          </form>
+        </div>
+      </div>
+      <div class="tip-display-container">
+        <div class="result-background">
+          <div class="tip-amount-per-person-container">
+            <div class="tip-amount-per-person-text">
+              <h2 class="result-text">Tip Amount</h2>
+              <p>/ person</p>
+            </div>
+            <div class="tip-amount-per-person-result">
+              <h1 id="tip-per-person">$0.00</h1>
+            </div>
+          </div>
+          <div class="total-per-person-container">
+            <div class="total-per-person-text">
+            <h2 class="result-text">Total</h2>
+            <p>/ person</p>
+            </div>
+            <div class="total-per-person-result">
+              <h1 id="total-per-person">$0.00</h1>
+            </div>
+          </div>
+          <div class="reset-container">
+            <button id="reset-button">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="js/script.js"></script>
 </body>
 </html>
